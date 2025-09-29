@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 })
 
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://useaisite.onrender.com',
     credentials:true
 }))
 app.use(express.json())
