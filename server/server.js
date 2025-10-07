@@ -13,8 +13,9 @@ app.use(cors({
     origin:'https://useaisite.onrender.com',
     credentials:true
 }))
-app.use(express.json())
+
 app.use(cookieParser())
+app.use(express.json())
 await connectCloudinary()
 
 app.get("/", (req, res) => {
