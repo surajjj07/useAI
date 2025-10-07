@@ -9,18 +9,18 @@ import cookieParser from 'cookie-parser'
 import userAuthRouter from './routes/userAuthRoutes.js'
 const app = express()
 
-await connectCloudinary()
-
-app.get("/", (req, res) => {
-    res.send("This is the server")
-})
-
 app.use(cors({
     origin:'https://useaisite.onrender.com',
     credentials:true
 }))
 app.use(express.json())
 app.use(cookieParser())
+await connectCloudinary()
+
+app.get("/", (req, res) => {
+    res.send("This is the server")
+})
+
 
 const PORT = process.env.PORT || 3000
 
